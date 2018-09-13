@@ -1,0 +1,47 @@
+﻿<Page x:Class="GroupGrindr.Group_Files"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GroupGrindr"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Group_Files">
+
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="103*"/>
+            <ColumnDefinition Width="106*"/>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="107*"/>
+            <ColumnDefinition Width="153*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle x:Name="MenuBar" Grid.Column="0" Grid.Row="0" Grid.RowSpan="8" Fill="MediumAquamarine" Margin="0,0,1,0"/>
+        <Button x:Name="Details" Click="Details_Click" Grid.Column="0" Grid.Row="1" Content="Details" Background="Transparent" FontSize="20" VerticalAlignment="Stretch" Margin="0,0.5,1,0.5"/>
+        <Button x:Name="Tasks" Click="Tasks_Click" Grid.Column="0" Grid.Row="2" Content="Tasks" Background="{x:Null}" FontSize="20" VerticalAlignment="Stretch" Margin="0,0,0,0" Grid.RowSpan="1"/>
+        <Button x:Name="Members" Click="Members_Click" Grid.Column="0" Grid.Row="4" Content="Members" Background="Transparent" FontSize="20" VerticalAlignment="Stretch" Margin="0,0,0,0" Grid.RowSpan="1"/>
+        <Button x:Name="Files" Grid.Column="0" Grid.Row="3" Content="Files" Background="DarkTurquoise" FontSize="20" VerticalAlignment="Stretch" Margin="0,0,0,0"/>
+        <Button x:Name="Menu" Click="Menu_Click" Grid.Column="0" Grid.Row="6" Content="Menu" Background="Transparent" FontSize="20" VerticalAlignment="Stretch" Margin="0,0,0,0"/>
+
+        <Image x:Name="ProfileIcon" Source="Default_Images/default_profile_icon.png" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="7" Margin="0,0,1,0" />
+        <Button x:Name="Profile" Grid.Column="0" Grid.Row="7" Content="" Background="Transparent" FontSize="20" VerticalAlignment="Stretch" Margin="0,0,1,0"/>
+        <Image x:Name="Logo" Source="Default_Images/budge1.jpg" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0" Grid.Column="0" Margin="0,0,1,4.5"/>
+
+        <Button x:Name="Upload" Grid.Column="3" Margin="0,5.5,0,4" Grid.Row="5" Content="Upload" Click="button1_Click" />
+        <TextBox x:Name="textBox1" Grid.Column="2" Margin="55,29,61,0" Grid.RowSpan="5" Grid.ColumnSpan="4" Height="253" VerticalAlignment="Top" />
+
+    </Grid>
+</Page>

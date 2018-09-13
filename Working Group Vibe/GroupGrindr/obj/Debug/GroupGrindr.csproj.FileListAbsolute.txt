@@ -1,0 +1,132 @@
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\MainWindow.baml
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\MainScreenFoundation.g.cs
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\MainWindow.g.cs
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\App.g.cs
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\GroupGrindr_MarkupCompile.cache
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\GroupGrindr_MarkupCompile.lref
+C:\User Program Files\GroupGrindr\GroupGrindr\bin\Debug\GroupGrindr.exe.config
+C:\User Program Files\GroupGrindr\GroupGrindr\bin\Debug\GroupGrindr.exe
+C:\User Program Files\GroupGrindr\GroupGrindr\bin\Debug\GroupGrindr.pdb
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\MainScreenFoundation.baml
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\GroupGrindr.g.resources
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\GroupGrindr.Properties.Resources.resources
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\GroupGrindr.csproj.GenerateResource.cache
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\GroupGrindr.csproj.CoreCompileInputs.cache
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\GroupGrindr.exe
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\GroupGrindr.pdb
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\Groups_Page.g.cs
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\Groups_Page.baml
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\Create_Group_Page.g.cs
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\Create_Group_Page.baml
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\App.baml
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\Group_Details.g.cs
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\Group_Members.g.cs
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\GroupGrindr.csprojResolveAssemblyReference.cache
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\Group_Details.baml
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\Group_Members.baml
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\Group_Tasks.g.cs
+C:\User Program Files\GroupGrindr\GroupGrindr\obj\Debug\Group_Tasks.baml
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\bin\Debug\GroupGrindr.exe.config
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\bin\Debug\GroupGrindr.exe
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\bin\Debug\GroupGrindr.pdb
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.csprojResolveAssemblyReference.cache
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\MainWindow.baml
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\Create_Group_Page.g.cs
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\Groups_Page.g.cs
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\Group_Details.g.cs
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\Group_Members.g.cs
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\Group_Tasks.g.cs
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\MainScreenFoundation.g.cs
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\MainWindow.g.cs
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\App.g.cs
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr_MarkupCompile.cache
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr_MarkupCompile.lref
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\App.baml
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\Create_Group_Page.baml
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\Groups_Page.baml
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\Group_Details.baml
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\Group_Members.baml
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\Group_Tasks.baml
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\MainScreenFoundation.baml
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.g.resources
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.Properties.Resources.resources
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.csproj.GenerateResource.cache
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.csproj.CoreCompileInputs.cache
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.exe
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.pdb
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\bin\Debug\System.Data.SQLite.dll
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\bin\Debug\System.Data.SQLite.xml
+C:\User Program Files\GroupVibe\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.csproj.CopyComplete
+C:\User Program Files\GroupGrindr2\GroupGrindr\bin\Debug\GroupGrindr.exe.config
+C:\User Program Files\GroupGrindr2\GroupGrindr\bin\Debug\GroupGrindr.exe
+C:\User Program Files\GroupGrindr2\GroupGrindr\bin\Debug\GroupGrindr.pdb
+C:\User Program Files\GroupGrindr2\GroupGrindr\bin\Debug\System.Data.SQLite.xml
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.csprojResolveAssemblyReference.cache
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\MainWindow.baml
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Create_Group_Page.g.cs
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Groups_Page.g.cs
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Group_Details.g.cs
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Group_Members.g.cs
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Group_Tasks.g.cs
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\MainScreenFoundation.g.cs
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\MainWindow.g.cs
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\App.g.cs
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr_MarkupCompile.cache
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr_MarkupCompile.lref
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\App.baml
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Create_Group_Page.baml
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Groups_Page.baml
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Group_Details.baml
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Group_Members.baml
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Group_Tasks.baml
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\MainScreenFoundation.baml
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.g.resources
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.Properties.Resources.resources
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.csproj.GenerateResource.cache
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.csproj.CoreCompileInputs.cache
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.csproj.CopyComplete
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.exe
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\GroupGrindr.pdb
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Group_Files.g.cs
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Group_Files.baml
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Login.g.cs
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Make_User.g.cs
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Login.baml
+C:\User Program Files\GroupGrindr2\GroupGrindr\obj\Debug\Make_User.baml
+C:\User Program Files\work on this version\GroupGrindr\bin\Debug\GroupGrindr.exe.config
+C:\User Program Files\work on this version\GroupGrindr\bin\Debug\GroupGrindr.exe
+C:\User Program Files\work on this version\GroupGrindr\bin\Debug\GroupGrindr.pdb
+C:\User Program Files\work on this version\GroupGrindr\bin\Debug\System.Data.SQLite.dll
+C:\User Program Files\work on this version\GroupGrindr\bin\Debug\System.Data.SQLite.xml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\GroupGrindr.csprojResolveAssemblyReference.cache
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\MainWindow.baml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Create_Group_Page.g.cs
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Groups_Page.g.cs
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Group_Details.g.cs
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Group_Files.g.cs
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Group_Members.g.cs
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Group_Tasks.g.cs
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Login.g.cs
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\MainScreenFoundation.g.cs
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\MainWindow.g.cs
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Make_User.g.cs
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\App.g.cs
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\GroupGrindr_MarkupCompile.cache
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\GroupGrindr_MarkupCompile.lref
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\App.baml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Create_Group_Page.baml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Groups_Page.baml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Group_Details.baml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Group_Files.baml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Group_Members.baml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Group_Tasks.baml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Login.baml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\MainScreenFoundation.baml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\Make_User.baml
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\GroupGrindr.g.resources
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\GroupGrindr.Properties.Resources.resources
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\GroupGrindr.csproj.GenerateResource.cache
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\GroupGrindr.csproj.CoreCompileInputs.cache
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\GroupGrindr.csproj.CopyComplete
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\GroupGrindr.exe
+C:\User Program Files\work on this version\GroupGrindr\obj\Debug\GroupGrindr.pdb
