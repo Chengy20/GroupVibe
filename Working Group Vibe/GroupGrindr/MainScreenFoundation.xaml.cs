@@ -33,10 +33,28 @@ namespace GroupGrindr
         public static List<string> GroupDescriptions = new List<string>();
     }
 
+    public class Person
+    {
+
+        public Person(string firstname, string lastname, string email, string username)
+        {
+            FName = firstname;
+            LName = lastname;
+            Email = email;
+            Username = username;
+        }
+
+        public string FName;
+        public string LName;
+        public string Email;
+        public string Username;
+    }
+
     public class GlobalVariables
     {
         public static SQLiteConnection connection;
         public static int selectedGroup;
+        public static Person currentPerson;
         public static void connectToDatabase()
         {
             GlobalVariables.connection = new SQLiteConnection("Data Source=Database.sqlite;Version=3;");
@@ -85,6 +103,37 @@ namespace GroupGrindr
             reader.Read();
             return int.Parse(reader["PersonID"].ToString());
         }
+        public static string iDToEmail(int personID)
+        {
+            string sql = $"SELECT Email FROM People WHERE PersonID == {personID}";
+            SQLiteCommand command = new SQLiteCommand(sql, GlobalVariables.connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            reader.Read();
+            return reader["Email"].ToString();
+        }
+        public static string iDToUsername(int personID)
+        {
+            string sql = $"SELECT Username FROM People WHERE PersonID == {personID}";
+            SQLiteCommand command = new SQLiteCommand(sql, GlobalVariables.connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            reader.Read();
+            return reader["Username"].ToString();
+        }
+
+        public static List<string> returnPersonInfo(int personID)
+        {
+            string sql = $"SELECT * FROM People WHERE PersonID == {personID}";
+            SQLiteCommand command = new SQLiteCommand(sql, GlobalVariables.connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            reader.Read();
+            return new List<string>()
+            {
+                reader["FName"].ToString(),
+                reader["LName"].ToString(),
+                reader["Email"].ToString(),
+                reader["Username"].ToString()
+            };
+        }
 
         public static void insertIntoGroup(string Name, string Colour, string Description)
         {
@@ -118,6 +167,24 @@ namespace GroupGrindr
                 tasks.Add((string)reader["Name"]);
             }
             return tasks;
+        }
+        public static List<string> returnNamesGroup(int groupID)
+        {
+            string sql = $"SELECT PersonID FROM GroupsIn WHERE GroupID == {groupID}";
+            SQLiteCommand command = new SQLiteCommand(sql, GlobalVariables.connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            List<int> peopleID = new List<int>();
+            while (reader.Read())
+            {
+                peopleID.Add(int.Parse(reader["PersonID"].ToString()));
+            }
+            List<string> returnList = new List<string>();
+            foreach (int ID in peopleID)
+            {
+                returnList.Add(GlobalVariables.iDToEmail(ID));
+            }
+            return returnList;
+
         }
 
 
@@ -165,7 +232,7 @@ namespace GroupGrindr
             reader.Read();
             string databasePassword = (reader["Password"]).ToString();
             return databasePassword == hashPassword(inputPassword);
-            
+
         }
         public static bool isCorrectPasswordUsername(string inputPassword, string username)
         {

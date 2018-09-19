@@ -35,6 +35,7 @@ namespace GroupGrindr
             var password = PasswordBox.Password;
 
             var user = UserName.Text;
+
             //Check user in database//// Idk How XD
 
             if (GlobalVariables.isUsernameInPeople(user) == false)
@@ -68,10 +69,22 @@ namespace GroupGrindr
                 }
             }
 
-
+            List<string> personInfoList = new List<string>();
 
             if (canContinue == true && (userPass || studentPass))
             {
+                // work here
+                if (userPass == true)
+                {
+                    // username is name
+                    personInfoList = GlobalVariables.returnPersonInfo(GlobalVariables.usernametoID(user));
+                }
+                if (studentPass == true)
+                {
+                    // email is name
+                    personInfoList = GlobalVariables.returnPersonInfo(GlobalVariables.emailToID(user));
+                }
+                GlobalVariables.currentPerson = new Person(personInfoList[0], personInfoList[1], personInfoList[2], personInfoList[3]);
                 NavigationService navService = NavigationService.GetNavigationService(this);
                 Groups_Page nextPage = new Groups_Page();
                 navService.Navigate(nextPage);
