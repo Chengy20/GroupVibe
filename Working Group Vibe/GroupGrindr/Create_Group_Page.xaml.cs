@@ -22,7 +22,8 @@ namespace GroupGrindr
     public static class DisplayUsernamesData
     {
         public static int STARTING_COLUMN = 7;
-        public static int TOTAL_USERNAMES = 0;
+        public static int TOTAL_USERNAMES;
+        public static List<string> NAMES_IN;
     }
     public partial class Create_Group_Page : Page
     {
@@ -30,39 +31,83 @@ namespace GroupGrindr
         {
             GlobalVariables.connectToDatabase();
             InitializeComponent();
+            resetData();
+            addSelfUser();
+        }
+
+        private void addSelfUser()
+        {
+            string username = GlobalVariables.currentPerson.Email;
+            Group_Members.Text = Group_Members.Text + $"{GlobalVariables.returnName(username)} ({username})" + Environment.NewLine;
+
+            Add_User_Name.Text = "";
+            DisplayUsernamesData.TOTAL_USERNAMES++;
+            DisplayUsernamesData.NAMES_IN.Add(username);
+        }
+
+        private void resetData()
+        {
+            DisplayUsernamesData.TOTAL_USERNAMES = 0;
+            DisplayUsernamesData.NAMES_IN = new List<string>();
         }
 
         private void Add_User_Confirm_Click(object sender, RoutedEventArgs e)
         {
+            // username is email
             string username = Add_User_Name.Text;
 
-            Group_Members.Text = Group_Members.Text + username + Environment.NewLine;
+            if (GlobalVariables.isEmailInPeople(username))
+            {
+                if (!DisplayUsernamesData.NAMES_IN.Contains(username))
+                {
+                    Group_Members.Text = Group_Members.Text + $"{GlobalVariables.returnName(username)} ({username})" + Environment.NewLine;
 
-            Add_User_Name.Text = "";
-            /*
-            TextBlock displayName = new TextBlock();
-            displayName.Text = username;
-            displayName.SetValue(Grid.ColumnProperty, 3);
-            displayName.SetValue(Grid.RowProperty, DisplayUsernamesData.STARTING_COLUMN + DisplayUsernamesData.TOTAL_USERNAMES);
-
-            MainGrid.Children.Add(displayName);
-            Add_User_Name.Text = "";
-            DisplayUsernamesData.TOTAL_USERNAMES++;
-            */
+                    Add_User_Name.Text = "";
+                    DisplayUsernamesData.TOTAL_USERNAMES++;
+                    DisplayUsernamesData.NAMES_IN.Add(username);
+                }
+                else
+                {
+                    MessageBox.Show("User is already added to group");
+                }
+            }
+            else
+            {
+                MessageBox.Show("User is not in database!");
+            }
         }
 
         private void Confirm_CreateGroup_Click(object sender, RoutedEventArgs e)
         {
-            GlobalGroupStorage.TOTAL_GROUPS++;
-            GlobalGroupStorage.GroupNames.Add(Group_Name.Text);
-            GlobalGroupStorage.GroupIDs.Add(Group_ID.Text);
-            GlobalGroupStorage.GroupDescriptions.Add(Group_Description.Text);
+            // Add a colour wheel or something
+            if (Group_Name.Text == "")
+            {
+                MessageBox.Show("A group name is required");
+            }
+            else if (Group_Description.Text == "")
+            {
+                MessageBox.Show("A description is required");
+            }
+            else
+            {
+                GlobalGroupStorage.TOTAL_GROUPS++;
+                GlobalGroupStorage.GroupNames.Add(Group_Name.Text);
+                GlobalGroupStorage.GroupIDs.Add(Group_ID.Text);
+                GlobalGroupStorage.GroupDescriptions.Add(Group_Description.Text);
 
-            GlobalVariables.insertIntoGroup(Group_Name.Text, "#FFAA20", Group_Description.Text);
+                GlobalVariables.insertIntoGroup(Group_Name.Text, "#FFAA20", Group_Description.Text);
 
-            NavigationService navService = NavigationService.GetNavigationService(this);
-            Group_Details nextPage = new Group_Details();
-            navService.Navigate(nextPage);
+                int groupID = GlobalVariables.returnAmountOfGroups();
+
+                foreach (string email in DisplayUsernamesData.NAMES_IN)
+                {
+                    GlobalVariables.insertPersonIntoGroup(GlobalVariables.emailToID(email), groupID);
+                }
+
+                NavigationService navService = NavigationService.GetNavigationService(this);
+                Groups_Page nextPage = new Groups_Page();
+                navService.Navigate(nextPage);
+            }
         }
     }
 
