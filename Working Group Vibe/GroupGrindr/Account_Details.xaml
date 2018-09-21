@@ -1,0 +1,51 @@
+﻿<Page x:Class="GroupGrindr.Account_Details"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GroupGrindr"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Account_Details" Loaded="Load">
+
+    <Grid x:Name="MainGrid" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle x:Name="MenuBar" Grid.Column="0" Grid.Row="0" Grid.RowSpan="6" Fill="MediumAquamarine"/>
+
+        <Button x:Name="CreateGroup" Click="CreateGroup_Click" Grid.Column="0" Grid.Row="2" Content="+" Background="Transparent" FontSize="20" VerticalAlignment="Stretch"/>
+
+        <Button x:Name="MyGroups" Click="MyGroups_Click" Grid.Column="0" Grid.Row="3" Content="My Groups" Background="Transparent" FontSize="20" VerticalAlignment="Stretch"/>
+
+
+        <Button x:Name="Profile" Grid.Column="0" Grid.Row="5" Content="" Background="#FF19A8F9" FontSize="20" VerticalAlignment="Stretch" Margin="0,0.111,0.222,-0.222"/>
+        <Image x:Name="ProfileIcon" Source="Default_Images/default_profile_icon.png" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="5" />
+
+        <Image x:Name="Logo" Source="Default_Images/budge1.jpg" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0" Grid.Column="0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="115.778,15.667,0,0" TextWrapping="Wrap" Text="First Name " VerticalAlignment="Top" Grid.ColumnSpan="2" Height="41" Grid.RowSpan="2" Width="219" Grid.Column="1" FontSize="22" FontFamily="Segoe UI Black" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="116.778,0.333,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="41" Width="219" Grid.RowSpan="2" Grid.Column="1" FontSize="22" FontFamily="Segoe UI Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="116.778,5.444,0,0" Grid.Row="4" TextWrapping="Wrap" Text="User Code" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="41" Width="219" Grid.Column="1" FontSize="22" FontFamily="Segoe UI Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="117.778,51.444,0,0" Grid.Row="4" TextWrapping="Wrap" Text="User Name" VerticalAlignment="Top" Height="41" Width="218" Grid.Column="1" FontSize="22" FontFamily="Segoe UI Black" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="FN" HorizontalAlignment="Left" Margin="57.333,15.667,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="41" Grid.RowSpan="2" Width="171" Grid.Column="2" FontSize="22" FontFamily="Segoe UI Black" Grid.Row="1"/>
+        <TextBlock x:Name="LN" HorizontalAlignment="Left" Margin="57.333,0.333,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="41" Grid.RowSpan="2" Width="171" Grid.Column="2" FontSize="22" FontFamily="Segoe UI Black"/>
+        <TextBlock x:Name="UC" HorizontalAlignment="Left" Margin="57.333,5.444,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="41" Width="171" Grid.Column="2" FontSize="22" FontFamily="Segoe UI Black"/>
+        <TextBlock x:Name="UN" HorizontalAlignment="Left" Margin="57.333,51.444,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="41" Width="171" Grid.Column="2" FontSize="22" FontFamily="Segoe UI Black"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="86.778,10,0,0" TextWrapping="Wrap" Text="User Account Details" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="51" Width="484" TextAlignment="Center" FontSize="36" FontFamily="MS Reference Sans Serif" FontWeight="Bold"/>
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="204" Margin="115.778,0.222,0,0" Grid.Row="2" VerticalAlignment="Top" Width="341" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+        <Image Grid.Column="3" HorizontalAlignment="Left" Height="143" Margin="9.889,143.444,0,-0.222" Grid.Row="4" Grid.RowSpan="2" VerticalAlignment="Top" Width="219" Source="Default_Images/logo.png"/>
+
+    </Grid>
+</Page>
