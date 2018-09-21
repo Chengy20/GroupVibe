@@ -28,7 +28,7 @@ namespace GroupGrindr
         }
         private void MyGroups_Click(object sender, RoutedEventArgs e)
         {
-            List<string> groups = GlobalVariables.returnListGroups();
+            List<string> groups = GlobalVariables.returnListGroupsIn(GlobalVariables.currentPerson.personID);
             int totalGroups = groups.Count;
             int currentRow = 1;
             int currentColumn = 1;
@@ -63,7 +63,7 @@ namespace GroupGrindr
                 name += sender.ToString()[i];
             }
 
-            GlobalVariables.selectedGroup = GlobalVariables.returnIDfromNameGroup(name);
+            GlobalVariables.selectedGroup = GlobalVariables.returnGroupIDfromName(name);
             NavigationService navService = NavigationService.GetNavigationService(this);
             Group_Details nextPage = new Group_Details();
             navService.Navigate(nextPage);
