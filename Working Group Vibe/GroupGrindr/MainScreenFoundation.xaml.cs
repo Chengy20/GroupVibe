@@ -36,18 +36,20 @@ namespace GroupGrindr
     public class Person
     {
 
-        public Person(string firstname, string lastname, string email, string username)
+        public Person(string firstname, string lastname, string email, string username, int personid)
         {
             FName = firstname;
             LName = lastname;
             Email = email;
             Username = username;
+            personID = personid;
         }
 
         public string FName;
         public string LName;
         public string Email;
         public string Username;
+        public int personID;
     }
 
     public class GlobalVariables
@@ -120,6 +122,16 @@ namespace GroupGrindr
             return reader["Username"].ToString();
         }
 
+        public static int returnPersonIDFromEmail(string email)
+        {
+            string sql = $"SELECT PersonID FROM People WHERE Email == '{email}'";
+            SQLiteCommand command = new SQLiteCommand(sql, GlobalVariables.connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            reader.Read();
+            return int.Parse(reader["PersonID"].ToString());
+        }
+
+
         public static List<string> returnPersonInfo(int personID)
         {
             string sql = $"SELECT * FROM People WHERE PersonID == {personID}";
@@ -158,16 +170,35 @@ namespace GroupGrindr
         }
         public static List<string> returnListGroups()
         {
-            List<string> tasks = new List<string>();
+            List<string> groups = new List<string>();
             string sql = "SELECT Name from Groups";
             SQLiteCommand command = new SQLiteCommand(sql, GlobalVariables.connection);
             SQLiteDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                tasks.Add((string)reader["Name"]);
+                groups.Add(reader["Name"].ToString());
             }
-            return tasks;
+            return groups;
         }
+
+        public static List<string> returnListGroupsIn(int personID)
+        {
+            List<int> groupIDs = new List<int>();
+            List<string> returnGroup = new List<string>();
+            string sql = $"SELECT GroupID FROM GroupsIn WHERE PersonID == {personID}";
+            SQLiteCommand command = new SQLiteCommand(sql, GlobalVariables.connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                groupIDs.Add(int.Parse(reader["GroupID"].ToString()));
+            }
+            foreach (int groupID in groupIDs)
+            {
+                returnGroup.Add(GlobalVariables.returnGroupInfo(groupID)[0]);
+            }
+            return returnGroup;
+        }
+
         public static List<string> returnNamesGroup(int groupID)
         {
             string sql = $"SELECT PersonID FROM GroupsIn WHERE GroupID == {groupID}";
@@ -417,6 +448,7 @@ namespace GroupGrindr
 
             return true;
         }
+
 
     }
 
