@@ -24,7 +24,6 @@ namespace GroupGrindr
         public Make_User()
         {
             InitializeComponent();
-            GlobalVariables.connectToDatabase();
         }
 
         private void GoToLogin(object sender, RoutedEventArgs e)
@@ -44,7 +43,7 @@ namespace GroupGrindr
 
             bool FirstNameContainsWrong = false;
             bool LastNameContainsWrong = false;
-
+            
             if (UserFirstName.Text.Contains("\u0022")) { LastNameContainsWrong = true; }
             if (UserLastName.Text.Contains("\u0022")) { LastNameContainsWrong = true; }
             if (UserFirstName.Text.Contains("\u0027")) { LastNameContainsWrong = true; }
@@ -127,7 +126,7 @@ namespace GroupGrindr
 
             if (PasswordBoxMake.Password.Any(char.IsUpper))
             {
-
+                
             }
             else
             {
@@ -136,30 +135,12 @@ namespace GroupGrindr
                 ErrorBox.Text = "Password Doesn't Meet Requirements!";
             }
 
-
-            // Zachary's tests
-
-            if (GlobalVariables.isEmailInPeople(UserEnteredCode.Text)) {
-                ErrorBox.Foreground = new BrushConverter().ConvertFromString("#ff0000") as SolidColorBrush;
-                ErrorBox.Text = "Student Code is already taken!";
-                Robbieisbudgesbestfriend = true;
-            }
-
-            if (GlobalVariables.isUsernameInPeople(UserEnteredName.Text)) {
-                ErrorBox.Foreground = new BrushConverter().ConvertFromString("#ff0000") as SolidColorBrush;
-                ErrorBox.Text = "Username is already taken!";
-                Robbieisbudgesbestfriend = true;
-            }
- 
-
-            // End of Zac's tests
             if (Robbieisbudgesbestfriend == false)
             {
                 ErrorBox.Foreground = new BrushConverter().ConvertFromString("#3dff11") as SolidColorBrush;
                 ErrorBox.Text = "User Created!";
                 PublishUser.Visibility = Visibility.Hidden;
                 Go_Login.Content = "Go To Login";
-                GlobalVariables.insertIntoPeople(UserFirstName.Text,UserLastName.Text, PasswordBoxConfirm.Password, int.Parse(UserEnteredCode.Text), UserEnteredName.Text);
             }
 
 

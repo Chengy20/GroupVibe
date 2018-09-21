@@ -165,8 +165,5 @@
   <ItemGroup>
     <Resource Include="Default_Images\budge1.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Default_Images\logo.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

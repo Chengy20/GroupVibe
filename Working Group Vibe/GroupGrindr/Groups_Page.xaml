@@ -30,21 +30,13 @@
 
         <Button x:Name="CreateGroup" Click="CreateGroup_Click" Grid.Column="0" Grid.Row="1" Content="+" Background="Transparent" FontSize="20" VerticalAlignment="Stretch"/>
 
-        <Button x:Name="ViewGroups" Click="MyGroups_Click" Grid.Column="0" Grid.Row="3" Content="View Groups" Background="Transparent" FontSize="18" VerticalAlignment="Stretch"/>
-        <Button x:Name="MyGroups" Click="Groups_Click" Grid.Column="0" Grid.Row="2" Content="My Groups" Background="Transparent" FontSize="20" VerticalAlignment="Stretch"/>
+        <Button x:Name="MyGroups" Click="Groups_Click" Grid.Column="0" Grid.Row="2" Content="My Groups" Background="DarkTurquoise" FontSize="20" VerticalAlignment="Stretch"/>
         <Image x:Name="ProfileIcon" Source="Default_Images/default_profile_icon.png" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="8" />
         <Button x:Name="Profile" Click="Profile_Click" Grid.Column="0" Grid.Row="8" Content="" Background="Transparent" FontSize="20" VerticalAlignment="Stretch"/>
 
         <Image x:Name="Logo" Source="Default_Images/budge1.jpg" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0" Grid.Column="0"/>
 
-        <TextBlock x:Name="GroupText" Text="Groups" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Stretch" FontSize="60" HorizontalAlignment="Stretch" Margin="10, 0"/>
-
-        <Button x:Name="TestButtonv2" Content="Test" Grid.Row="1" Grid.Column="2" Margin="5" Style="{StaticResource GroupButtonStyle}"/>
-        <Button x:Name="TestButton" Grid.Row="1" Grid.Column="1">
-            <StackPanel>
-                <TextBlock>Group_Name</TextBlock>
-            </StackPanel>
-        </Button>
+        <TextBlock x:Name="GroupText" Text="My Groups" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" VerticalAlignment="Stretch" FontSize="60" HorizontalAlignment="Stretch" Margin="10, 0"/>
 
     </Grid>
 </Page>

@@ -23,72 +23,17 @@ namespace GroupGrindr
         public Login()
         {
             InitializeComponent();
-            GlobalVariables.connectToDatabase();
-            //GlobalVariables.insertIntoPeople("Z", "C", "123", 9, "B");
         }
 
         private void LoginDown(object sender, RoutedEventArgs e)
         {
-            var canContinue = true;
-            var userPass = true;
-            var studentPass = true;
             var password = PasswordBox.Password;
-
             var user = UserName.Text;
-
             //Check user in database//// Idk How XD
 
-            if (GlobalVariables.isUsernameInPeople(user) == false)
-            {
-                ErrorBox.Foreground = new BrushConverter().ConvertFromString("#3dff11") as SolidColorBrush;
-                ErrorBox.Text = "User not found";
-                userPass = false;
-            }
-            if (GlobalVariables.isEmailInPeople(user) == false)
-            {
-                ErrorBox.Foreground = new BrushConverter().ConvertFromString("#3dff11") as SolidColorBrush;
-                ErrorBox.Text = "Student Code not found";
-                studentPass = false;
-            }
-
-            if (GlobalVariables.IsDigitsOnly(user))
-            {
-                if (GlobalVariables.isCorrectPasswordEmail(password, int.Parse(user)) == false)
-                {
-                    ErrorBox.Foreground = new BrushConverter().ConvertFromString("#3dff11") as SolidColorBrush;
-                    ErrorBox.Text = "Incorrect Password";
-                    canContinue = false;
-                }
-            } else
-            {
-                if (GlobalVariables.isCorrectPasswordUsername(password, user) == false)
-                {
-                    ErrorBox.Foreground = new BrushConverter().ConvertFromString("#3dff11") as SolidColorBrush;
-                    ErrorBox.Text = "Incorrect Password";
-                    canContinue = false;
-                }
-            }
-
-            List<string> personInfoList = new List<string>();
-
-            if (canContinue == true && (userPass || studentPass))
-            {
-                // work here
-                if (userPass == true)
-                {
-                    // username is name
-                    personInfoList = GlobalVariables.returnPersonInfo(GlobalVariables.usernametoID(user));
-                }
-                if (studentPass == true)
-                {
-                    // email is name
-                    personInfoList = GlobalVariables.returnPersonInfo(GlobalVariables.emailToID(user));
-                }
-                GlobalVariables.currentPerson = new Person(personInfoList[0], personInfoList[1], personInfoList[2], personInfoList[3]);
-                NavigationService navService = NavigationService.GetNavigationService(this);
-                Groups_Page nextPage = new Groups_Page();
-                navService.Navigate(nextPage);
-            }
+            NavigationService navService = NavigationService.GetNavigationService(this);
+            Groups_Page nextPage = new Groups_Page();
+            navService.Navigate(nextPage);
         }
 
         private void Make_User(object sender, RoutedEventArgs e)

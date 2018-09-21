@@ -21,7 +21,6 @@
         <TextBlock HorizontalAlignment="Left" Margin="212,213,0,0" TextWrapping="Wrap" Text="User Name" VerticalAlignment="Top" FontFamily="MV Boli" FontSize="22" Height="38"/>
         <TextBlock HorizontalAlignment="Left" Margin="212,259,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" FontFamily="MV Boli" FontSize="22" Height="38"/>
         <TextBlock HorizontalAlignment="Left" Margin="235,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Microsoft YaHei Light" FontSize="22" Height="77" Width="341" FontWeight="Bold" TextAlignment="Center"><Run Text="Login To Your Group"/><LineBreak/><Run Text="Vibe Account"/></TextBlock>
-        <TextBlock x:Name="ErrorBox" HorizontalAlignment="Left" Margin="235,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="28" Width="341" FontFamily="Javanese Text" FontSize="18" FontWeight="Bold" TextAlignment="Center" Foreground="Red"/>
         <Button x:Name="Login1" Content="Login" HorizontalAlignment="Left" Margin="384,328,0,0" VerticalAlignment="Top" Width="110" Height="30
                 " Click="LoginDown" FontFamily="Segoe UI Black" FontSize="18" FontWeight="Bold" Foreground="Black" Background="White"/>
         <Button x:Name="Create_User" Content="Create User" HorizontalAlignment="Left" Margin="235,328,0,0" VerticalAlignment="Top" Width="110" Height="30                 " FontFamily="Segoe UI Black" FontSize="18" Foreground="Black" Click="Make_User" Background="White"/>
