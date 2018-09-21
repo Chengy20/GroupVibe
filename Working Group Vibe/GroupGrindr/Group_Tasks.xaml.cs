@@ -24,6 +24,15 @@ namespace GroupGrindr
         {
             GlobalVariables.connectToDatabase();
             InitializeComponent();
+            load_tasks();
+        }
+
+        public void load_tasks()
+        {
+            foreach (List<string> taskInfo in GlobalVariables.returnTasks(GlobalVariables.selectedGroup))
+            {
+                DisplayTasks.Text = DisplayTasks.Text + taskInfo[0] + Environment.NewLine + taskInfo[1] + Environment.NewLine + taskInfo[2] + Environment.NewLine;
+            }
         }
 
         private void Profile_Click(object sender, RoutedEventArgs e)
@@ -74,6 +83,7 @@ namespace GroupGrindr
 
                 DisplayTasks.Text = DisplayTasks.Text + date.ToShortDateString();
                 Date.Text = date.ToShortDateString();
+                GlobalVariables.taskTime = date;
             }
         }
 
@@ -95,6 +105,8 @@ namespace GroupGrindr
 
         private void Create_Task(object sender, RoutedEventArgs e)
         {
+            GlobalVariables.insertIntoTasks(TaskName.Text, TaskDescription.Text, GlobalVariables.taskTime.ToString());
+            GlobalVariables.assignTaskToGroup(GlobalVariables.returnTaskID(TaskName.Text, TaskDescription.Text, GlobalVariables.taskTime.ToString()), GlobalVariables.selectedGroup);
             DisplayTasks.Text = DisplayTasks.Text + Environment.NewLine + TaskName.Text + Environment.NewLine + TaskDescription.Text + Environment.NewLine;
         }
     }

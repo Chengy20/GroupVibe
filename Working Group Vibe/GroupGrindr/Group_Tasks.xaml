@@ -20,7 +20,7 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="101*"/>
             <ColumnDefinition Width="100*"/>
             <ColumnDefinition Width="117*"/>
             <ColumnDefinition Width="70*"/>
@@ -30,19 +30,22 @@
         </Grid.ColumnDefinitions>
 
         <Rectangle x:Name="MenuBar" Grid.Column="0" Grid.Row="0" Grid.RowSpan="8" Fill="MediumAquamarine" Margin="0,0,1,0"/>
-        <Button x:Name="Details" Click="Details_Click" Grid.Column="0" Grid.Row="1" Content="Details" Background="Transparent" FontSize="20" VerticalAlignment="Stretch" Margin="0,0.5,0,52" Grid.RowSpan="2"/>
-        <Button x:Name="Tasks" Click="Tasks_Click" Grid.Column="0" Grid.Row="2" Content="Tasks" Background="DarkTurquoise" FontSize="20" VerticalAlignment="Stretch" Margin="0,0.5,0,0"/>
+        <Button x:Name="Details" Click="Details_Click" Grid.Column="0" Grid.Row="1" Content="Details" Background="Transparent" FontSize="20" VerticalAlignment="Stretch" Margin="0,0.5,1.5,0"/>
+        <Button x:Name="Tasks" Click="Tasks_Click" Grid.Column="0" Grid.Row="2" Content="Tasks" Background="DarkTurquoise" FontSize="20" VerticalAlignment="Stretch" Margin="0,0,1.5,0"/>
         <Button x:Name="Members" Click="Members_Click" Grid.Column="0" Grid.Row="4" Content="Members" Background="Transparent" FontSize="20"/>
         <Button x:Name="Files" Click="Files_Click" Grid.Column="0" Grid.Row="3" Content="Files" Background="Transparent" FontSize="20"/>
         <Button x:Name="Menu" Click="Menu_Click" Grid.Column="0" Grid.Row="6" Content="Menu" Background="Transparent" FontSize="20" VerticalAlignment="Stretch" Margin="0,2,1,0"/>
 
         <Image x:Name="ProfileIcon" Source="Default_Images/default_profile_icon.png" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="7" Margin="0,0,1,0" />
         <Button x:Name="Profile" Click="Profile_Click" Grid.Column="0" Grid.Row="7" Content="" Background="Transparent" FontSize="20" VerticalAlignment="Stretch" Margin="0,0,1,0"/>
-        <Image x:Name="Logo" Source="Default_Images/budge1.jpg" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="0" Grid.Column="0" Margin="0,0,1,51.5" Grid.RowSpan="2"/>
+        <Image x:Name="Logo" Source="Default_Images/budge1.jpg" HorizontalAlignment="Stretch" Grid.Row="0" Grid.Column="0" Margin="0,0,1.5,0.5"/>
         <Calendar x:Name="Task_Calendar" SelectionMode="MultipleRange" Grid.RowSpan="4" Margin="99,0,1,34" Grid.Column="1" Grid.Row="3" RenderTransformOrigin="0.525,0.705" Grid.ColumnSpan="3" />
-        <Button x:Name="AddTaskButton" Content="Add Task" Grid.Column="1" Margin="99,0.5,0,0" Grid.Row="2" Background="White" FontSize="20" Click="GetDate" Grid.ColumnSpan="2"/>
-        <Popup x:Name="EventDetails" Margin="0,0,1,51.5" Grid.RowSpan="2">
-            <Grid Background="#FFE2E2E2" Height="256">
+        <Button x:Name="AddTaskButton" Content="Add Task" Grid.Column="2" Margin="0,0,9.5,0" Grid.Row="2" Background="White" FontSize="20" Click="GetDate"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Left" Width="292" Grid.ColumnSpan="2" Grid.Column="4" Margin="54,52.5,0,51" Grid.Row="1" Grid.RowSpan="6">
+            <TextBlock x:Name="DisplayTasks" TextWrapping="Wrap" Grid.RowSpan="4" Background="White" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="4" Grid.Row="2" Width="273" />
+        </ScrollViewer>
+        <Popup x:Name="EventDetails" Margin="10.5,10,47.5,10" Grid.ColumnSpan="4" Grid.Column="1" Grid.RowSpan="4">
+            <Grid Background="#FFE2E2E2" Grid.Row="3" Grid.ColumnSpan="5">
                 <TextBlock Margin="135,10,135,0" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Text="Setup Task" FontSize="20" FontWeight="Bold" Height="30" VerticalAlignment="Top" />
                 <TextBox x:Name="TaskName" Margin="16,59,0,0" Text="Task Name" Background="White" RenderTransformOrigin="0.5,0.5" Foreground="#FF989898" Height="41" VerticalAlignment="Top" HorizontalAlignment="Left" Width="144" GotFocus="TextBox_GotFocus" />
                 <TextBox x:Name="TaskDescription" Margin="16,116,0,0" Text="Description" Background="White" AcceptsReturn="True" TextWrapping="Wrap" SpellCheck.IsEnabled="True" Language="en-US" RenderTransformOrigin="0.5,0.5" Foreground="#FF989898" Height="96" VerticalAlignment="Top" HorizontalAlignment="Left" Width="144" GotFocus="Description_Box" />
@@ -51,6 +54,6 @@
                 <Button Margin="247,157,26,28.5" Content="Create Task" FontSize="18" FontWeight="Bold" Click="Create_Task"/>
             </Grid>
         </Popup>
-        <TextBlock x:Name="DisplayTasks" ScrollViewer.VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Grid.RowSpan="5" Background="White" Grid.Column="5" Grid.Row="2" RenderTransformOrigin="0.5,0.5" Height="212" Width="285" />
+
     </Grid>
 </Page>

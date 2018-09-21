@@ -24,7 +24,7 @@ namespace GroupGrindr
         {
             GlobalVariables.connectToDatabase();
             InitializeComponent();
-            //load_Page();
+            load_Page();
         }
 
         private void load_Page()
@@ -68,11 +68,11 @@ namespace GroupGrindr
 
         private void Tasks_Click_1(object sender, RoutedEventArgs e)
         {
-            
+
             NavigationService navService = NavigationService.GetNavigationService(this);
             Group_Tasks nextPage = new Group_Tasks();
             navService.Navigate(nextPage);
-            
+
         }
 
         private void Files_Click(object sender, RoutedEventArgs e)

@@ -24,9 +24,48 @@ namespace GroupGrindr
         {
             GlobalVariables.connectToDatabase();
             InitializeComponent();
+            List<string> memberNames = GlobalVariables.returnNamesGroup(GlobalVariables.selectedGroup);
+            if (memberNames.Count > 6)
+            {
+                Members_Backbar.SetValue(Grid.RowSpanProperty, 6);
+                Rectangle secondLayer = new Rectangle();
+                secondLayer.SetValue(Grid.RowProperty, 1);
+                secondLayer.SetValue(Grid.ColumnProperty, 3);
+                secondLayer.SetValue(Grid.RowSpanProperty, memberNames.Count - 6);
+                secondLayer.Fill = new SolidColorBrush(Colors.White);
 
+                MainGrid.Children.Add(secondLayer);
+                setNames(memberNames, 2, 6);
+                setNames(memberNames, 3, memberNames.Count - 6);
+            }
+            else
+            {
+                Members_Backbar.SetValue(Grid.RowSpanProperty, memberNames.Count);
+                setNames(memberNames, 2, memberNames.Count);
+            }
         }
 
+        public void setNames(List<string> Names, int column, int rowspan)
+        {
+            for (var i = 0; i < rowspan; i++)
+            {
+                TextBlock newT = new TextBlock();
+                newT.SetValue(Grid.RowProperty, i + 1);
+                newT.SetValue(Grid.ColumnProperty, column);
+                newT.HorizontalAlignment = HorizontalAlignment.Center;
+                newT.VerticalAlignment = VerticalAlignment.Center;
+                newT.FontSize = 20;
+                if (column == 2)
+                {
+                    newT.Text = Names[i];
+                }
+                else
+                {
+                    newT.Text = Names[i + 6];
+                }
+                MainGrid.Children.Add(newT);
+            }
+        }
         private void Details_Click(object sender, RoutedEventArgs e)
         {
             NavigationService navService = NavigationService.GetNavigationService(this);
@@ -36,11 +75,11 @@ namespace GroupGrindr
 
         private void Tasks_Click(object sender, RoutedEventArgs e)
         {
-            
+
             NavigationService navService = NavigationService.GetNavigationService(this);
             Group_Tasks nextPage = new Group_Tasks();
             navService.Navigate(nextPage);
-            
+
         }
         private void Members_Click(object sender, RoutedEventArgs e)
         {

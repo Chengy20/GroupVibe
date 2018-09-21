@@ -36,6 +36,10 @@ namespace GroupGrindr
         {
             string username = Add_User_Name.Text;
 
+            Group_Members.Text = Group_Members.Text + username + Environment.NewLine;
+
+            Add_User_Name.Text = "";
+            /*
             TextBlock displayName = new TextBlock();
             displayName.Text = username;
             displayName.SetValue(Grid.ColumnProperty, 3);
@@ -44,6 +48,7 @@ namespace GroupGrindr
             MainGrid.Children.Add(displayName);
             Add_User_Name.Text = "";
             DisplayUsernamesData.TOTAL_USERNAMES++;
+            */
         }
 
         private void Confirm_CreateGroup_Click(object sender, RoutedEventArgs e)

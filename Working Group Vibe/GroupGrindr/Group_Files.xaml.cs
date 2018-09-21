@@ -46,7 +46,9 @@ namespace GroupGrindr
             {
                 // Open document 
                 string filename = dlg.FileName;
-                textBox1.Text = filename;
+                textBox1.Text = textBox1.Text + filename + Environment.NewLine;
+                textBox1.Text = textBox1.Text + "File Uploaded!" + Environment.NewLine;
+
             }
         }
         private void Menu_Click(object sender, RoutedEventArgs e)
