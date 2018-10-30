@@ -25,9 +25,17 @@ namespace GroupGrindr
             InitializeComponent();
         }
 
-        private void LeaveGroups_Click(object sender, RoutedEventArgs e)
+        private void Leave_Click(object sender, RoutedEventArgs e)
         {
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure you want to leave this group?", "Leave Confirmation", System.Windows.MessageBoxButton.YesNo);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                GlobalVariables.leaveGroup();
 
+                NavigationService navService = NavigationService.GetNavigationService(this);
+                Groups_Page nextPage = new Groups_Page();
+                navService.Navigate(nextPage);
+            }
         }
     }
 }
